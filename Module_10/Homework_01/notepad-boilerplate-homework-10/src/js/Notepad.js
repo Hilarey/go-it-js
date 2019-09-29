@@ -1,3 +1,4 @@
+import  {PRIORITY_TYPES} from './utils/constant';
 class Notepad {
     constructor(notes) {
     // Перенеси свойства и методы объекта notepad в конструктор
@@ -48,18 +49,5 @@ class Notepad {
     filterNotesByPriority(priority) {
       return this._notes.filter(e => e.priority === priority);
     }
-    // для хрома
-    static Priority = {
-      LOW: 0,
-      NORMAL: 1,
-      HIGH: 2,
-    }
-  }
-  //для ноде
-  // static get Priority() {
-  //   return {
-  //     LOW: 0,
-  //     NORMAL: 1,
-  //     HIGH: 2,
-  //   };
-  // }
+};
+export default Notepad;

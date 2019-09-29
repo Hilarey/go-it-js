@@ -10,13 +10,8 @@ class Notepad {
       return this._notes.find(e => e.id === id);
     }
     saveNote(note) {
-      if (note.priority){
         this._notes.push(note);
-      } else {
-        note.priority = PRIORITY_TYPES.LOW;
-        this._notes.push(note);
-      }
-      return note;
+        return note;
     }
     deleteNote(id) {
       const index = this._notes.findIndex(e => e.id === id);
@@ -48,18 +43,5 @@ class Notepad {
     filterNotesByPriority(priority) {
       return this._notes.filter(e => e.priority === priority);
     }
-    // для хрома
-    static Priority = {
-      LOW: 0,
-      NORMAL: 1,
-      HIGH: 2,
-    }
-  }
-  //для ноде
-  // static get Priority() {
-  //   return {
-  //     LOW: 0,
-  //     NORMAL: 1,
-  //     HIGH: 2,
-  //   };
-  // }
+};
+export default Notepad;

@@ -14,16 +14,18 @@ class Notepad {
 
   saveNote(note) {
     this._notes.push(note);
-    return this;
+    return note;
   }
 
   deleteNote(id) {
-    for (let i = 0; i < this.notes.length; i += 1) {
-      if (this.notes[i].id === id) {
-        this.notes.splice(i, 1);
-        break;
-      }
-    }
+    const index = this._notes.findIndex(e => e.id === id);
+    this.notes.splice(index, 1);
+    // for (let i = 0; i < this.notes.length; i += 1) {
+    //   if (this.notes[i].id === id) {
+    //     this.notes.splice(i, 1);
+    //     break;
+    //   }
+    // }
   }
   updateNoteContent(id, updatedContent) {
     Object.assign(this.findNoteById(id), updatedContent);
