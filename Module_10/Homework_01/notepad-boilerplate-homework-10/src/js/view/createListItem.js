@@ -45,7 +45,7 @@ function createListItem({ id, title, body, priority }) {
   const noteSectionR = createElem('section', 'note__section');
 
   noteSectionL.append(
-    createButton(NOTE_ACTIONS.DESCREASE_PRIORITY, ICON_TYPES.ARROW_DOWN)
+    createButton(NOTE_ACTIONS.DECREASE_PRIORITY, ICON_TYPES.ARROW_DOWN)
   );
   noteSectionL.append(
     createButton(NOTE_ACTIONS.INCREASE_PRIORITY, ICON_TYPES.ARROW_UP)
