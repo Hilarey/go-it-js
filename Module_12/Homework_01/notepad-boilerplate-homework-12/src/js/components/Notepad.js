@@ -1,5 +1,6 @@
 import storage from '../storage';
 import { refreshList } from '../mvc/view';
+import { notepad } from '../mvc/model';
 
 class Notepad {
   constructor(notes) {
