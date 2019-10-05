@@ -3,6 +3,13 @@ import Notepad from '../components/Notepad';
 
 import storage from '../storage';
 
+
+// const local = JSON.parse(localStorage.getItem('notes'));
+
+// const init = local ? local : INITIAL_NOTES;
+
+// const notepad = new Notepad(init);
+
 let notes;
 try {
   notes = storage.load('key-note');
